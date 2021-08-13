@@ -47,17 +47,6 @@ F 3 "http://www.ti.com/lit/gpn/csd19532q5b" V 5650 1600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LT8705-rescue:CP1-Device C1
-U 1 1 6115514A
-P 975 1000
-F 0 "C1" H 925 750 50  0000 L CNN
-F 1 "220uF/100V" H 875 650 50  0000 L CNN
-F 2 "Capacitor_THT:C_Radial_D12.5mm_H25.0mm_P5.00mm" H 975 1000 50  0001 C CNN
-F 3 "~" H 975 1000 50  0001 C CNN
-	1    975  1000
-	1    0    0    -1  
-$EndComp
-$Comp
 L LT8705-rescue:CP1-Device C2
 U 1 1 6115CE08
 P 1200 1000
@@ -992,8 +981,6 @@ EXTVCC
 Wire Wire Line
 	9900 3800 10250 3800
 Wire Wire Line
-	825  850  975  850 
-Wire Wire Line
 	3350 1900 3125 1900
 Text Label 3125 1900 0    50   ~ 0
 BG1
@@ -1131,29 +1118,16 @@ F 3 "http://www.ti.com/lit/gpn/csd19532q5b" V 3550 1050 50  0001 L CNN
 	1    3550 1050
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2825 700  3075 700 
-Wire Wire Line
-	3275 700  3575 700 
-Text Label 2825 700  0    50   ~ 0
-CSPIN
-Text Label 3300 700  0    50   ~ 0
-CSNIN
 Connection ~ 6875 900 
 Wire Wire Line
-	6425 750  6725 750 
+	6475 750  6775 750 
 Wire Wire Line
-	6225 750  5925 750 
-Text Label 5925 750  0    50   ~ 0
+	6175 750  5875 750 
+Text Label 5875 750  0    50   ~ 0
 CSPOUT
-Text Label 6450 750  0    50   ~ 0
+Text Label 6500 750  0    50   ~ 0
 CSNOUT
-Wire Wire Line
-	2900 1150 2700 1150
-Connection ~ 975  1150
 Connection ~ 1200 1150
-Wire Wire Line
-	1200 1150 975  1150
 Connection ~ 1500 1150
 Wire Wire Line
 	1500 1150 1200 1150
@@ -1206,8 +1180,6 @@ F 3 "" H 675 1100 50  0001 C CNN
 	1    675  1150
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	675  1150 975  1150
 Wire Wire Line
 	8400 1200 8600 1200
 $Comp
@@ -1277,7 +1249,6 @@ Connection ~ 1200 850
 Connection ~ 1500 850 
 Connection ~ 1700 850 
 Connection ~ 1900 850 
-Connection ~ 2100 850 
 Wire Wire Line
 	1500 850  1700 850 
 Wire Wire Line
@@ -1286,42 +1257,31 @@ Wire Wire Line
 	1700 850  1900 850 
 Wire Wire Line
 	1900 850  2100 850 
-Wire Wire Line
-	2100 850  2300 850 
-Connection ~ 975  850 
-Wire Wire Line
-	975  850  1200 850 
 $Comp
 L LT8705-rescue:C-Device C7
 U 1 1 611536ED
-P 2300 1000
-F 0 "C7" H 2250 750 50  0000 L CNN
-F 1 "4.7uF/100V" H 2250 675 50  0001 L CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 2338 850 50  0001 C CNN
-F 3 "~" H 2300 1000 50  0001 C CNN
-	1    2300 1000
+P 2600 1000
+F 0 "C7" H 2550 750 50  0000 L CNN
+F 1 "4.7uF/100V" H 2550 675 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 2638 850 50  0001 C CNN
+F 3 "~" H 2600 1000 50  0001 C CNN
+	1    2600 1000
 	1    0    0    -1  
 $EndComp
-Connection ~ 2300 850 
-Wire Wire Line
-	2300 850  2500 850 
 $Comp
 L LT8705-rescue:C-Device C8
 U 1 1 61153F53
-P 2500 1000
-F 0 "C8" H 2450 750 50  0000 L CNN
-F 1 "4.7uF/100V" H 2450 675 50  0001 L CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 2538 850 50  0001 C CNN
-F 3 "~" H 2500 1000 50  0001 C CNN
-	1    2500 1000
+P 2800 1000
+F 0 "C8" H 2750 750 50  0000 L CNN
+F 1 "4.7uF/100V" H 2750 675 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 2838 850 50  0001 C CNN
+F 3 "~" H 2800 1000 50  0001 C CNN
+	1    2800 1000
 	1    0    0    -1  
 $EndComp
 Connection ~ 2100 1150
 Wire Wire Line
 	2100 1150 1900 1150
-Connection ~ 2300 1150
-Wire Wire Line
-	2300 1150 2100 1150
 $Comp
 L LT8705-rescue:C-Device C28
 U 1 1 61160416
@@ -1420,34 +1380,8 @@ Wire Wire Line
 Wire Wire Line
 	3850 2475 3750 2475
 Connection ~ 3750 2475
-$Comp
-L Device:R_Shunt R1
-U 1 1 6116C974
-P 3175 850
-F 0 "R1" V 3500 850 50  0000 C CNN
-F 1 "WSK06125L000FEA" V 3425 825 50  0000 C CNN
-F 2 "Resistor_SMD:R_Shunt_Vishay_WSKW0612" V 3105 850 50  0001 C CNN
-F 3 "~" H 3175 850 50  0001 C CNN
-	1    3175 850 
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	3375 850  3650 850 
-$Comp
-L Device:R_Shunt R13
-U 1 1 611A11FE
-P 6325 900
-F 0 "R13" V 6650 900 50  0000 C CNN
-F 1 "WSK06125L000FEA" V 6575 875 50  0000 C CNN
-F 2 "Resistor_SMD:R_Shunt_Vishay_WSKW0612" V 6255 900 50  0001 C CNN
-F 3 "~" H 6325 900 50  0001 C CNN
-	1    6325 900 
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	5750 900  6075 900 
-Wire Wire Line
-	6525 900  6875 900 
 $Comp
 L LT8705-rescue:R-Device R3
 U 1 1 611F9CD2
@@ -1653,45 +1587,28 @@ Wire Wire Line
 Wire Wire Line
 	6075 1400 6075 900 
 Connection ~ 6075 900 
-Wire Wire Line
-	6075 900  6125 900 
 $Comp
 L LT8705-rescue:C-Device C9
 U 1 1 6146E0DE
-P 2700 1000
-F 0 "C9" H 2650 750 50  0000 L CNN
-F 1 "4.7uF/100V" H 2650 675 50  0001 L CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 2738 850 50  0001 C CNN
-F 3 "~" H 2700 1000 50  0001 C CNN
-	1    2700 1000
+P 3000 1000
+F 0 "C9" H 2950 750 50  0000 L CNN
+F 1 "4.7uF/100V" H 2950 675 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 3038 850 50  0001 C CNN
+F 3 "~" H 3000 1000 50  0001 C CNN
+	1    3000 1000
 	1    0    0    -1  
 $EndComp
 $Comp
 L LT8705-rescue:C-Device C10
 U 1 1 6146E505
-P 2900 1000
-F 0 "C10" H 2850 750 50  0000 L CNN
-F 1 "4.7uF/100V" H 2850 675 50  0001 L CNN
-F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 2938 850 50  0001 C CNN
-F 3 "~" H 2900 1000 50  0001 C CNN
-	1    2900 1000
+P 3200 1000
+F 0 "C10" H 3150 750 50  0000 L CNN
+F 1 "4.7uF/100V" H 3150 675 50  0001 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 3238 850 50  0001 C CNN
+F 3 "~" H 3200 1000 50  0001 C CNN
+	1    3200 1000
 	1    0    0    -1  
 $EndComp
-Connection ~ 2500 1150
-Wire Wire Line
-	2500 1150 2300 1150
-Connection ~ 2700 1150
-Wire Wire Line
-	2700 1150 2500 1150
-Wire Wire Line
-	2500 850  2700 850 
-Connection ~ 2500 850 
-Connection ~ 2700 850 
-Wire Wire Line
-	2700 850  2900 850 
-Connection ~ 2900 850 
-Wire Wire Line
-	2900 850  2975 850 
 $Comp
 L LT8705-rescue:R_POT-Device RV1
 U 1 1 614AE7A0
@@ -1720,4 +1637,99 @@ Wire Wire Line
 	4475 2175 4800 2175
 Wire Wire Line
 	5750 1400 5775 1400
+Wire Wire Line
+	2100 1150 2600 1150
+Connection ~ 2600 1150
+Wire Wire Line
+	2600 1150 2800 1150
+Connection ~ 2800 1150
+Wire Wire Line
+	2800 1150 3000 1150
+Connection ~ 3000 1150
+Wire Wire Line
+	3000 1150 3200 1150
+Connection ~ 2100 850 
+Connection ~ 2600 850 
+Wire Wire Line
+	2600 850  2800 850 
+Connection ~ 2800 850 
+Wire Wire Line
+	2800 850  3000 850 
+Connection ~ 3000 850 
+Wire Wire Line
+	3000 850  3200 850 
+Connection ~ 3200 850 
+Wire Wire Line
+	3200 850  3650 850 
+Wire Wire Line
+	675  1150 975  1150
+Wire Wire Line
+	1200 1150 975  1150
+Connection ~ 975  1150
+Wire Wire Line
+	975  850  1200 850 
+Wire Wire Line
+	825  850  975  850 
+Connection ~ 975  850 
+$Comp
+L LT8705-rescue:CP1-Device C1
+U 1 1 6115514A
+P 975 1000
+F 0 "C1" H 925 750 50  0000 L CNN
+F 1 "220uF/100V" H 875 650 50  0000 L CNN
+F 2 "Capacitor_THT:C_Radial_D12.5mm_H25.0mm_P5.00mm" H 975 1000 50  0001 C CNN
+F 3 "~" H 975 1000 50  0001 C CNN
+	1    975  1000
+	1    0    0    -1  
+$EndComp
+Text Label 2525 700  0    50   ~ 0
+CSNIN
+Text Label 1950 700  0    50   ~ 0
+CSPIN
+Wire Wire Line
+	2500 700  2800 700 
+Wire Wire Line
+	1950 700  2200 700 
+$Comp
+L Device:R R1
+U 1 1 6121B64F
+P 2350 850
+F 0 "R1" V 2143 850 50  0000 C CNN
+F 1 "R" V 2234 850 50  0000 C CNN
+F 2 "" V 2280 850 50  0001 C CNN
+F 3 "~" H 2350 850 50  0001 C CNN
+	1    2350 850 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2100 850  2200 850 
+Wire Wire Line
+	2200 700  2200 850 
+Connection ~ 2200 850 
+Wire Wire Line
+	2500 850  2600 850 
+Wire Wire Line
+	2500 700  2500 850 
+Connection ~ 2500 850 
+$Comp
+L Device:R R13
+U 1 1 61271573
+P 6325 900
+F 0 "R13" V 6118 900 50  0000 C CNN
+F 1 "R" V 6209 900 50  0000 C CNN
+F 2 "" V 6255 900 50  0001 C CNN
+F 3 "~" H 6325 900 50  0001 C CNN
+	1    6325 900 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6075 900  6175 900 
+Wire Wire Line
+	6175 750  6175 900 
+Connection ~ 6175 900 
+Wire Wire Line
+	6475 900  6875 900 
+Wire Wire Line
+	6475 750  6475 900 
+Connection ~ 6475 900 
 $EndSCHEMATC
