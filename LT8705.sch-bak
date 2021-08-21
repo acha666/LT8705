@@ -1045,12 +1045,12 @@ $EndComp
 $Comp
 L LT8705-rescue:R-Device R7
 U 1 1 611B48A9
-P 4550 2550
-F 0 "R7" V 4650 2450 50  0000 C CNN
-F 1 "10R" V 4650 2600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4480 2550 50  0001 C CNN
-F 3 "~" H 4550 2550 50  0001 C CNN
-	1    4550 2550
+P 4500 2550
+F 0 "R7" V 4600 2450 50  0000 C CNN
+F 1 "10R" V 4600 2600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 4430 2550 50  0001 C CNN
+F 3 "~" H 4500 2550 50  0001 C CNN
+	1    4500 2550
 	0    1    1    0   
 $EndComp
 $Comp
@@ -1067,17 +1067,17 @@ $EndComp
 $Comp
 L LT8705-rescue:C-Device C16
 U 1 1 611BA2EF
-P 4050 2550
-F 0 "C16" V 4000 2425 50  0000 C CNN
-F 1 "C" V 4000 2625 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4088 2400 50  0001 C CNN
-F 3 "~" H 4050 2550 50  0001 C CNN
-	1    4050 2550
+P 4000 2550
+F 0 "C16" V 3950 2425 50  0000 C CNN
+F 1 "C" V 3950 2625 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4038 2400 50  0001 C CNN
+F 3 "~" H 4000 2550 50  0001 C CNN
+	1    4000 2550
 	0    1    1    0   
 $EndComp
 Text Label 4175 2275 0    50   ~ 0
 CSP
-Text Label 4225 2550 0    50   ~ 0
+Text Label 4175 2550 0    50   ~ 0
 CSN
 $Comp
 L LT8705-rescue:CSD19532Q5B-Transistor_FET Q1
@@ -1311,7 +1311,7 @@ SW1
 Text Label 4950 1400 0    50   ~ 0
 SW2
 Wire Wire Line
-	4400 2550 4200 2550
+	4350 2550 4150 2550
 Wire Wire Line
 	4350 2275 4150 2275
 Wire Wire Line
@@ -1720,8 +1720,6 @@ Wire Wire Line
 	4650 2275 4800 2275
 Connection ~ 4800 2275
 Wire Wire Line
-	4700 2550 4800 2550
-Wire Wire Line
 	4800 2550 4800 2575
 Connection ~ 4800 2575
 $Comp
@@ -1736,19 +1734,43 @@ F 3 "" H 3750 2550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3900 2550 3750 2550
-Wire Wire Line
 	3750 2275 3750 2550
-Connection ~ 3750 2550
 $Comp
-L LT8705-rescue:R-Device R?
+L LT8705-rescue:R-Device R26
 U 1 1 613A0A49
 P 2075 2650
-F 0 "R?" H 2145 2696 50  0000 L CNN
+F 0 "R26" H 2145 2696 50  0000 L CNN
 F 1 "0" H 2145 2605 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" V 2005 2650 50  0001 C CNN
 F 3 "~" H 2075 2650 50  0001 C CNN
 	1    2075 2650
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	3850 2550 3750 2550
+Connection ~ 3750 2550
+Wire Wire Line
+	4650 2550 4800 2550
+Wire Wire Line
+	10000 5150 10100 5150
+Wire Wire Line
+	10100 5150 10100 5450
+Connection ~ 10000 5150
+$Comp
+L Device:R R?
+U 1 1 61231BF9
+P 10100 5600
+F 0 "R?" H 10170 5646 50  0000 L CNN
+F 1 "R" H 10170 5555 50  0000 L CNN
+F 2 "" V 10030 5600 50  0001 C CNN
+F 3 "~" H 10100 5600 50  0001 C CNN
+	1    10100 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 5750 10100 5800
+Wire Wire Line
+	10100 5800 9725 5800
+Text Label 9725 5800 0    50   ~ 0
+VOUT
 $EndSCHEMATC
