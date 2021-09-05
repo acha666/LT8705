@@ -1162,7 +1162,7 @@ MODE
 Text Label 10700 5350 0    50   ~ 0
 MODE
 Text Label 10700 5450 0    50   ~ 0
-GND
+GNDA
 $Comp
 L LT8705-rescue:GNDA-power #PWR03
 U 1 1 6119B6BD

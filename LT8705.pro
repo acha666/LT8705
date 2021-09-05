@@ -1,4 +1,4 @@
-update=2021/8/25 12:05:59
+update=2021/8/27 22:43:32
 version=1
 last_client=pcbnew
 [general]
@@ -40,9 +40,12 @@ MinMicroViaDrill=0.09999999999999999
 MinHoleToHole=0.25
 TrackWidth1=0.2
 TrackWidth2=0.2
-TrackWidth3=0.5
-TrackWidth4=1
-TrackWidth5=1.5
+TrackWidth3=0.3
+TrackWidth4=0.35
+TrackWidth5=0.4
+TrackWidth6=0.5
+TrackWidth7=1
+TrackWidth8=1.5
 ViaDiameter1=0.6
 ViaDrill1=0.3
 ViaDiameter2=0.6
